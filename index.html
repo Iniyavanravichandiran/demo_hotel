@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Avanya Resort — Luxury Living in Tiruvannamalai</title>
+  <meta name="description" content="Experience cinematic luxury at Avanya Resort, Tiruvannamalai. Premium pool villas, world-class amenities, and serene nature — where luxury meets serenity." />
+  <meta name="theme-color" content="#0a0a0a" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- GSAP + ScrollTrigger + Lenis (CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
+  <script src="https://unpkg.com/lenis@1.1.16/dist/lenis.min.js" defer></script>
+</head>
+<body>
+
+  <!-- ========== LOADER ========== -->
+  <div class="loader" id="loader">
+    <img src="images/logo.png" alt="Avanya Resorts" class="loader__logo" />
+    <div class="loader__bar"></div>
+  </div>
+
+  <!-- ========== NAVIGATION ========== -->
+  <nav class="nav" id="nav">
+    <a href="#hero">
+      <img src="images/logo.png" alt="Avanya Resorts" class="nav__logo" />
+    </a>
+    <ul class="nav__links">
+      <li><a href="#experience" class="nav__link">Experience</a></li>
+      <li><a href="#villas" class="nav__link">Villas</a></li>
+      <li><a href="#night" class="nav__link">Ambience</a></li>
+      <li><a href="#layout" class="nav__link">Layout</a></li>
+      <li><a href="#cta" class="nav__link">Book Now</a></li>
+    </ul>
+    <!-- Hamburger (mobile) -->
+    <div class="nav__hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="nav__mobile-menu" id="mobileMenu">
+    <a href="#experience" class="nav__mobile-link" data-mobile-link>Experience</a>
+    <a href="#villas" class="nav__mobile-link" data-mobile-link>Villas</a>
+    <a href="#night" class="nav__mobile-link" data-mobile-link>Ambience</a>
+    <a href="#layout" class="nav__mobile-link" data-mobile-link>Layout</a>
+    <a href="#cta" class="nav__mobile-link" data-mobile-link>Book Now</a>
+  </div>
+
+  <!-- ========== HERO SECTION ========== -->
+  <section class="hero" id="hero">
+    <div class="hero__bg">
+      <img src="images/entrance.png" alt="Avanya Resort Entrance" class="hero__img" loading="eager" />
+      <div class="hero__overlay"></div>
+    </div>
+    <div class="hero__content">
+      <p class="hero__tag">A Timeless Escape</p>
+      <h1 class="hero__title">AVANYA RESORT</h1>
+      <p class="hero__location">Tiruvannamalai</p>
+      <p class="hero__subtitle">Where Luxury Meets Serenity</p>
+    </div>
+    <div class="scroll-indicator" id="scrollIndicator">
+      <span class="scroll-indicator__text">Scroll</span>
+      <div class="scroll-indicator__line"></div>
+    </div>
+  </section>
+
+  <!-- ========== EXPERIENCE SECTION ========== -->
+  <section class="experience" id="experience">
+    <div class="experience__bg">
+      <img src="images/pool-villas.png" alt="Pool Villas" class="experience__img" loading="lazy" />
+      <div class="experience__overlay"></div>
+    </div>
+    <div class="experience__content">
+      <p class="experience__tag">The Experience</p>
+      <h2 class="experience__title">Immerse in Nature & Luxury</h2>
+      <p class="experience__desc">
+        Step into a world where lush tropical landscapes embrace world-class architecture. 
+        Every corner of Avanya is thoughtfully designed to blend comfort with nature's serenity — 
+        from private pool villas to breathtaking water gardens.
+      </p>
+      <div class="experience__divider"></div>
+    </div>
+  </section>
+
+  <!-- ========== VILLAS SECTION (Horizontal Scroll) ========== -->
+  <section class="villas" id="villas">
+    <div class="villas__header">
+      <p class="villas__tag">Our Retreats</p>
+      <h2 class="villas__title">Private Luxury Villas</h2>
+    </div>
+    <div class="villas__scroll-wrap">
+      <div class="villas__track" id="villasTrack">
+        <!-- Card 1 -->
+        <div class="villa-card">
+          <img src="images/top-view.png" alt="Royal Villa" class="villa-card__img" loading="lazy" />
+          <div class="villa-card__body">
+            <h3 class="villa-card__name">Royal Pool Villa</h3>
+            <p class="villa-card__desc">Private infinity pool overlooking lush gardens with premium furnishings.</p>
+            <p class="villa-card__price">From ₹18,000 / night</p>
+          </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="villa-card">
+          <img src="images/pool-villas.png" alt="Garden Suite" class="villa-card__img" loading="lazy" />
+          <div class="villa-card__body">
+            <h3 class="villa-card__name">Garden Water Suite</h3>
+            <p class="villa-card__desc">A tranquil water garden retreat surrounded by tropical beauty and modern luxury.</p>
+            <p class="villa-card__price">From ₹14,000 / night</p>
+          </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="villa-card">
+          <img src="images/entrance.png" alt="Deluxe Room" class="villa-card__img" loading="lazy" />
+          <div class="villa-card__body">
+            <h3 class="villa-card__name">Deluxe Heritage Room</h3>
+            <p class="villa-card__desc">Elegant interiors with panoramic views of the resort's sprawling campus.</p>
+            <p class="villa-card__price">From ₹9,500 / night</p>
+          </div>
+        </div>
+        <!-- Card 4 -->
+        <div class="villa-card">
+          <img src="images/night-pool.png" alt="Signature Suite" class="villa-card__img" loading="lazy" />
+          <div class="villa-card__body">
+            <h3 class="villa-card__name">Signature Night Suite</h3>
+            <p class="villa-card__desc">Experience the magic of midnight pools and ambient glow from your private terrace.</p>
+            <p class="villa-card__price">From ₹22,000 / night</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== NIGHT AMBIENCE SECTION ========== -->
+  <section class="night" id="night">
+    <div class="night__bg">
+      <img src="images/night-pool.png" alt="Night Pool Ambience" class="night__img" loading="lazy" />
+      <div class="night__overlay"></div>
+    </div>
+    <!-- Glowing lights -->
+    <div class="night__glow night__glow--1"></div>
+    <div class="night__glow night__glow--2"></div>
+    <div class="night__glow night__glow--3"></div>
+    <div class="night__content">
+      <p class="night__tag">After Dark</p>
+      <h2 class="night__title">A World That Glows at Night</h2>
+      <p class="night__desc">
+        As the sun sets behind Tiruvannamalai's sacred hills, Avanya transforms 
+        into an enchanted sanctuary of shimmering pools, warm golden light, 
+        and a serenity that only nightfall can bring.
+      </p>
+    </div>
+  </section>
+
+  <!-- ========== MASTER LAYOUT SECTION (3D Zoom) ========== -->
+  <section class="master-layout" id="layout">
+    <div class="master-layout__sticky">
+      <div class="master-layout__bg">
+        <img src="images/top-view.png" alt="Resort Master Layout" class="master-layout__img" loading="lazy" />
+        <div class="master-layout__overlay"></div>
+      </div>
+      <div class="master-layout__content">
+        <p class="master-layout__tag">The Vision</p>
+        <h2 class="master-layout__title">Crafted to Perfection</h2>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CTA SECTION ========== -->
+  <section class="cta" id="cta">
+    <div class="cta__glow"></div>
+    <p class="cta__tag">Your Journey Awaits</p>
+    <h2 class="cta__title">Book Your Stay</h2>
+    <p class="cta__desc">Begin your luxury escape at Avanya Resort. Reserve your private villa today and experience a world beyond ordinary.</p>
+    <a href="#" class="cta__btn" id="ctaBtn">Reserve Now</a>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="footer__grid">
+      <!-- Column 1: Branding -->
+      <div class="footer__col">
+        <img src="images/logo.png" alt="Avanya Resorts" class="footer__logo" />
+        <p class="footer__resort-name">Avanya Resorts &amp; Retreat</p>
+        <p class="footer__tagline">Where Luxury Meets Serenity</p>
+      </div>
+      <!-- Column 2: Contact -->
+      <div class="footer__col">
+        <h4 class="footer__heading">Contact Us</h4>
+        <address class="footer__address">
+          #573, Sai Avenue, Samandhanoor Road,<br />
+          Kumarakudi Village,<br />
+          Tiruvannamalai - 606611
+        </address>
+        <div class="footer__contact-items">
+          <a href="mailto:info@avanyaresorts.com" class="footer__contact-link">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 4L12 13 2 4"/></svg>
+            info@avanyaresorts.com
+          </a>
+          <a href="tel:+919940641234" class="footer__contact-link">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+            +91 99 4064 1234
+          </a>
+        </div>
+      </div>
+      <!-- Column 3: Quick Links -->
+      <div class="footer__col">
+        <h4 class="footer__heading">Explore</h4>
+        <ul class="footer__links">
+          <li><a href="#experience" class="footer__link">Experience</a></li>
+          <li><a href="#villas" class="footer__link">Villas</a></li>
+          <li><a href="#night" class="footer__link">Ambience</a></li>
+          <li><a href="#layout" class="footer__link">Layout</a></li>
+          <li><a href="#cta" class="footer__link">Book Now</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p class="footer__text">&copy; 2026 Avanya Resorts &amp; Retreat, Tiruvannamalai. All rights reserved.</p>
+      <ul class="footer__bottom-links">
+        <li><a href="#" class="footer__link">Privacy Policy</a></li>
+        <li><a href="#" class="footer__link">Terms of Service</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="protect.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
